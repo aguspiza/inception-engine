@@ -167,7 +167,3 @@ isIn: func (xAxis, yAxis: Float2, b2Center, b2Scale: Float3, corner: Float2, rea
     false
 
 }
-
-
-
-
