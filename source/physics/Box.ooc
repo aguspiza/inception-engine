@@ -10,4 +10,3 @@ Box: class extends Geometry {
     }
     
 }
-

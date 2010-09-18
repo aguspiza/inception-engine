@@ -1,6 +1,6 @@
 OOC_FLAGS=-driver=sequence -v -gcc -g -noclean +-w -sourcepath=source/ $(shell echo $$OOC_FLAGS)
 OOC?=rock
-TEST?=fall
+TEST?=track_editor
 
 %:
 	${OOC} ${OOC_FLAGS} test/$@ -o=$@.x

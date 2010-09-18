@@ -1,9 +1,14 @@
+import gfx/RenderWindow
 import engine/[Engine, Entity, Property, Update, Message]
 
 main: func {
     
     engine := Engine new()
-
+    width := 1024
+    height := 500
+    
+	win := RenderWindow new(width, height, 16, false, "fall test")
+	engine addEntity(win)
     bob   := Entity new("bob")
     alice := Entity new("alice")
     
@@ -21,7 +26,7 @@ PingPong: class extends Update {
     
     sent := false
     sender: Entity
-    target: String
+    target: Entity
     
     init: func ~withEnt(=sender, =target) {
         sender set("alive", true)

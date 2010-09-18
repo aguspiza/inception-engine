@@ -85,7 +85,7 @@ Scene: class extends Entity {
         ticksPerFrame := 100
         delta := time1 - time2
         //"delta = %d" printfln(delta)
-        usleep((ticksPerFrame - delta) * 100)
+		if(delta < ticksPerFrame) usleep((ticksPerFrame - delta) * 100)
         
 		
 	    return true
@@ -112,7 +112,7 @@ Scene: class extends Entity {
 	useProgram: func(prg: ShaderProgram) {
 		if(prg != null) {
 			glUseProgram(prg id)
-			//printf("using program #%d\n",prg program)
+			//printf("using program #%d\n",prg id)
 			glUniform1f(prg timeid,engine getTicks() as Float)
 		}
 	}

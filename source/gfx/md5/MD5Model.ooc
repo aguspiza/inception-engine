@@ -179,10 +179,6 @@ MD5Mesh: class {
     }
 }
 
-// Init DevIL and ILUT (utility toolkit for OpenGL)
-ilInit()
-ilutInit()
-
 /* MD5 model structure */
 MD5Model: class extends Model {
     baseSkel : MD5Joint*

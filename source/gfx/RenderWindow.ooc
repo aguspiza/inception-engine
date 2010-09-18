@@ -1,7 +1,7 @@
 
-use sdl, glew, glu
+use sdl, glew, glu, devil
 import sdl/[Sdl, Video, Event], glew, glu/Glu
-
+import devil
 import engine/[Message, Entity, Types]
 import console/Console
 import gfx/Scene
@@ -74,6 +74,11 @@ RenderWindow: class extends Entity {
 			fprintf(stderr, "Could not initialize OpenGL.\n")
 			quit()
 		}
+
+		// Init DevIL and ILUT (utility toolkit for OpenGL)
+		ilInit()
+		iluInit()
+		ilutInit() //this calls GL so must be initialized after GL
 
 		/* Resize the initial window */
 		resizeWindow(width, height)
