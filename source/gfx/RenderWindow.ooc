@@ -73,11 +73,6 @@ RenderWindow: class extends Entity {
 			quit()
 		}
 
-		// Init DevIL and ILUT (utility toolkit for OpenGL)
-		ilInit()
-		iluInit()
-		ilutInit() //this calls GL so must be initialized after GL
-
 		/* Resize the initial window */
 		resizeWindow(width, height)
 		
