@@ -25,11 +25,11 @@
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-use math, glew, devil
-import glew, devil, math
+use math, glew
+import glew, math
 
 import structs/ArrayList
-import ../Model
+import ../[Model, Texture]
 import engine/Types
 
 // Vectors
@@ -214,7 +214,7 @@ MD5Model: class extends Model {
         
         if(mesh textureID == -1) {
             printf("Loading texture '%s'\n", mesh shader)
-            mesh textureID = ilutGLLoadImage(mesh shader)
+            mesh textureID = Texture loadGLImage(mesh shader)
             printf("Finished loading '%s', got ID %d!\n", mesh shader, mesh textureID)
         }
         
@@ -303,7 +303,7 @@ MD5Model: class extends Model {
         }
         glEnd()
     }
-    
+
     render: func {
         
         skeleton : MD5Joint*

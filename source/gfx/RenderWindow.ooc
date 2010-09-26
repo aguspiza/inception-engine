@@ -1,7 +1,5 @@
-
-use sdl, glew, glu, devil
-import sdl/[Sdl, Video, Event], glew, glu/Glu
-import devil
+use sdl, glew, glu
+import sdl/[Core, Video, Event], glew, glu/Glu
 import engine/[Message, Entity, Types]
 import console/Console
 import gfx/Scene
